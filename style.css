@@ -1,0 +1,42 @@
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+
+body {
+    background-color: rgb(37, 37, 37);
+   text-align: center;
+   vertical-align: middle;
+   align-items: center;
+}
+
+#container {
+margin: auto;
+width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#logo {
+    font-family: 'Product Sans Light', sans-serif;
+    color: whitesmoke;
+    letter-spacing: 5px;
+    width:auto;
+    height: auto;
+    margin: 20px;
+    font-size: 100px;
+    text-align: center;
+}
+
+#searchBar{
+    margin: 5px;
+    width: 450px;
+    height: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 24px;
+    font-family: 'Product Sans Light', sans-serif;
+}
+
+#searchBt{
+border: none;
+border-radius: 24px;
+font-family: 'Product Sans Light', sans-serif;
+}
