@@ -11,9 +11,10 @@
       
         <div class="container">
             <h1 id="logo">Google</h1>
+            <span id="imgLogo">Images</span>
            
             <div id="form">
-                <form action="https://www.google.com/search">
+                <form action="https://www.google.com/search?tbm=isch&q=$">
                     <input type="text" name="q" id="searchBar" placeholder="Search Google or type a URL">
                     <br>
                     <input type="submit" value="Search" id="searchBt"> 
@@ -25,18 +26,8 @@
         </div> <!-- end Container -->
 
         <div id="refrences">
-            <a href="googleImg.html" id="googleImg" class="anchors">Google Images</a>
-            <a href="googleAdv.html" id="googleAdv" class="anchors">Advanced Search</a>
+            <a href="index.html" id="googleSearch">Google Search</a>
+            <a href="googleAdv.html" id="googleAdv">Advanced Search</a>
         </div>
-
-        <script>
-         function feelingLucky() {
-            var query = document.querySelector('.search').value;
-            window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query) + '&btnI';
-            }
-        </script>
-        
-
-        
     </body>
 </html>
