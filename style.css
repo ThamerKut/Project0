@@ -60,3 +60,11 @@ a {
     font-family: 'Product Sans Light', sans-serif; 
     font-size: 15px;
 }
+label {
+    color: whitesmoke;
+}
+
+.words{
+    margin: 15px;
+}
+
