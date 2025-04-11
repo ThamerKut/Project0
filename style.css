@@ -64,7 +64,18 @@ label {
     color: whitesmoke;
 }
 
-.words{
-    margin: 15px;
+form{
+    flex: display;
+    align-content: flex-start;
+    
+ 
 }
+#Adv{
+    display: flex;
+    justify-content: start;
+    color: #4487f6;
+
+}
+
+
 
