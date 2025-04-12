@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/google-sans'); /* import the font that google uses*/
 body {
     background-color: rgb(37, 37, 37);
-   
+   display: ;
 }
 
 .container {
@@ -30,10 +30,9 @@ body {
         font: 16px / 16px Arial, sans-serif;
         position: absolute;
         top: 140px;
-        left: 400px;
+        left: 460px;
         bottom: 0;
         white-space: nowrap;
-        text-align: center;
 }
 
 #searchBar{
@@ -58,24 +57,60 @@ a {
     text-align: right;
     color: whitesmoke;
     font-family: 'Product Sans Light', sans-serif; 
-    font-size: 15px;
+    font-size: 13px;
 }
 label {
     color: whitesmoke;
 }
 
 form{
-    flex: display;
-    align-content: flex-start;
+    display: flex;
     
- 
 }
+
+.labels{
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.lbl{
+    margin: 2.5px;
+    font-family: 'Product Sans Light', sans-serif;
+    font-size: medium;
+}
+
+.textfields{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.txtfields{
+    margin: 4px;
+    width: 300px;
+    height: 14px;
+    border: none;
+    font-family: 'Product Sans Light', sans-serif;
+    background-color:whitesmoke;
+    
+}
+
 #Adv{
     display: flex;
     justify-content: start;
-    color: #4487f6;
+    color: #8f0e0e;
+    background-color: rgba(0, 0, 0, 0.158);
+    font-family: 'Product Sans Light', sans-serif;
+    /* border: 1px solid ; */
 
 }
+
+#button{
+    display: flex;
+    align-items: center;
+}
+
 
 
 

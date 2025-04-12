@@ -8,33 +8,70 @@
 </head>
 
 <body>
-    <h1 id="Adv">Advanced Search</h1>
-    <form action="">
-        <div class="words" id="allWords">    
-        <label >All these words:</label> 
-        <input class="txtfields" type="text">
-        </div>
-
-        <div class="words" id="exactWord">    
-        <label>this exact word or phrase:</label> 
-        <input class="txtfields" type="text">
-        </div>
-
-        <div class="words" id="any">    
-        <label>any of these words:</label> 
-        <input class="txtfields" type="text">
-        </div>
-
-        <div class="words" id="none">    
-        <label>none of these words:</label> 
-        <input class="txtfields" type="text">
-        </div>
-    </form>
-
     <div id="refrences">
         <a href="index.html" id="googleSearch">Google Search</a>
         <a href="googleImg.html" id="googleImg">Google Images</a>
     </div>
-</body>
+    
+    <h1 id="Adv">Advanced Search</h1>
+    
+    <form action="https://www.google.com/search">
+        
+        <div class="labels">    
+        <label id="all" class="lbl" for="txt1">All these words:</label>
+        <label id="exact" class="lbl" for="txt2">this exact word or phrase:</label> 
+        <label id="any" class="lbl" for="txt3">any of these words:</label> 
+        <label id="none" class="lbl" for="txt4">none of these words:</label> 
+        </div>
 
+        <div class="textfields">
+            <input class="txtfields" placeholder="The Office" type="text" id="txt1">
+            <input class="txtfields" placeholder="Best Sitcom" type="text" id="txt2">
+            <input class="txtfields" placeholder="Kevin Angela" type="text" id="txt3">
+            <input class="txtfields" placeholder="Toby Flenderson HR" type="text" id="txt4">
+        </div>
+        <div id="button">
+            <input type="submit" value="Search" id="searchBt"> 
+        </div>
+    </form>
+    
+    <script>
+        document.querySelector("form").addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent default form action
+    
+            // Get input values
+            const allWords = document.getElementById("txt1").value.trim();
+            const exactPhrase = document.getElementById("txt2").value.trim();
+            const anyWords = document.getElementById("txt3").value.trim();
+            const noneWords = document.getElementById("txt4").value.trim();
+    
+            let query = "";
+    
+            if (allWords) {
+                query += allWords + " ";
+            }
+    
+            if (exactPhrase) {
+                query += `"${exactPhrase}" `;
+            }
+    
+            if (anyWords) {
+                const anyList = anyWords.split(" ").join(" OR ");
+                query += `(${anyList}) `;
+            }
+    
+            if (noneWords) {
+                const noneList = noneWords.split(" ").map(word => `-${word}`).join(" ");
+                query += noneList;
+            }
+    
+            // Construct the full Google search URL
+            const searchURL = "https://www.google.com/search?q=" + encodeURIComponent(query.trim());
+    
+            // Redirect to the constructed URL
+            window.location.href = searchURL;
+        });
+    </script>
+   
+</body>
 </html>
